@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: php_console_app
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: ["tail", "-f", "/dev/null"]

@@ -20,3 +20,23 @@ php script.php input.csv
 ```shell
 vendor/phpunit/phpunit/phpunit tests/Service/TransactionServiceTest.php
 ```
+
+### Running with Docker
+
+1. Run in the cli the following command in order to build and start the container in detached mode:
+
+```shell
+docker-compose up --build --detach
+```
+
+2. Start the php cli script "<container_name>" should be replaced with the name of the newly created container:
+
+```shell
+docker run <container_name> php script.php input.csv
+```
+
+3. In order to find the container name use the following command:
+
+```shell
+docker ps
+```
